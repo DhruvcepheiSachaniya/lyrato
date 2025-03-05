@@ -80,7 +80,7 @@ const PdfViewer2 = () => {
         
         {/* YouTube Player */}
         <div style={{ width: "95%", maxWidth: "600px", height: '300px',border: '2px solid black', borderRadius: '5px' }}>
-          <YouTube videoId="5m0u91k1fS8?si=alhcioPdGLpytI4D" opts={videoOptions} />
+          <YouTube videoId="CZHtZP39AOw?si=4mlkXiN3L2ErSX3v" opts={videoOptions} />
         </div>
       </div>
 
