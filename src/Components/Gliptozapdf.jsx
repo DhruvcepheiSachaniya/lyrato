@@ -61,21 +61,28 @@ const PdfViewer2 = () => {
   };
 
   return (
-    <div style={{ 
-      margin: 0, padding: 0, height: "100vh", 
-      display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
-      background: "#f4f4f4" // Light background for contrast
-    }}>
+    // <div style={{ 
+    //   margin: 0, padding: 0, height: "100vh", 
+    //   display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+    //   background: "#f4f4f4" // Light background for contrast
+    // }}>
+    <div style={{ margin: 0, padding: 0, minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+
+      {/* Header */}
+      <div style={{ display: "flex", justifyContent: "center", backgroundColor: "#f0f0f0", padding: "10px", textAlign: "center", borderBottom: "1px solid #ccc" }}>
+        <img height={'50px'} src="/assets/Lyrato_Logo.png" alt="Logo A" />
+      </div>
       
       {/* Background Bar */}
       <div style={{
         width: "100%",
-        maxWidth: "900px", // Set max width
+        // maxWidth: "900px", // Set max width
         // height: "300px", // Background Bar Height
         // background: "#333", // Dark color for contrast
         borderRadius: "10px", // Rounded corners
         display: "flex", alignItems: "center", justifyContent: "center",
-        position: "relative"
+        position: "relative",
+        marginTop: "90px"
       }}>
         
         {/* YouTube Player */}
@@ -84,17 +91,25 @@ const PdfViewer2 = () => {
         </div>
       </div>
 
-      {/* Button to open PDF in a new tab */}
-      <button 
-        onClick={() => window.open(pdfPath, "_blank")}
-        style={{
-          marginTop: "20px", padding: "12px 24px", fontSize: "18px", cursor: "pointer",
-          background: "#007bff", color: "#fff", border: "none", borderRadius: "5px"
-        }}
-      >
-        View PDF
-      </button>
-
+      {/* Button to Open PDF in a New Tab */}
+      <div style={{ textAlign: "center", marginTop: "20px", marginBottom: "10px", flex: 1 }}>
+        <button
+          onClick={() => window.open(pdfPath, "_blank")}
+          style={{
+            padding: "12px 24px", fontSize: "18px", cursor: "pointer",
+            background: "#007bff", color: "#fff", border: "none", borderRadius: "5px"
+          }}
+        >
+          View PDF
+        </button>
+      </div>
+      
+      {/* Footer */}
+      <div style={{ backgroundColor: "#f0f0f0", textAlign: "center", borderTop: "1px solid #ccc", padding: "10px", marginTop: "auto" }}>
+        <p style={{ color: '#2E2E33' }}>
+          Lyrato | copyright {(new Date().getFullYear())}© Eris Lifescience Ltd
+        </p>
+      </div>
     </div>
   );
 };
