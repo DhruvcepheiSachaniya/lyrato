@@ -70,7 +70,7 @@ const PdfViewer2 = () => {
 
       {/* Header */}
       <div style={{ display: "flex", justifyContent: "center", backgroundColor: "#f0f0f0", padding: "10px", textAlign: "center", borderBottom: "1px solid #ccc" }}>
-        <img height={'50px'} src="/assets/Lyrato_Logo.png" alt="Logo A" />
+        <img height={'130px'} src="/assets/Lyrato_new_img.png" alt="Logo A" />
       </div>
       
       {/* Background Bar */}
